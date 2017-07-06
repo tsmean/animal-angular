@@ -48,10 +48,14 @@ export class DisplayAnimalComponent implements OnChanges {
   }
 
   updateAnimal() {
-    this.animalService.updateAnimal(this.animalCopy).subscribe(animal => {
+    const animalObs = this.animalService.updateAnimal(this.animalCopy);
+    animalObs.subscribe(animal => {
       this.animalStore.addOrUpdate(animal);
       this.toggleEditable();
     });
+    if (this.animalCopy.name) {
+      this.animalService.addAnimalPic(this.animalCopy.name, animalObs);
+    }
   }
 
   resetCopy() {

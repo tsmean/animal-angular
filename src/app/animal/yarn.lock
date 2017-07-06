@@ -2,6 +2,3 @@
 # yarn lockfile v1
 
 
-"@tsmean/utils@^1.1.0":
-  version "1.1.1"
-  resolved "https://registry.yarnpkg.com/@tsmean/utils/-/utils-1.1.1.tgz#8ebb47d493ee583ab68c13139d0648db855d6976"

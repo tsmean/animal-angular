@@ -38,22 +38,9 @@ export class CreateAnimalComponent implements OnInit {
     });
 
     if (this.newAnimal.name) {
-      this.addAnimal(animalObs);
+      this.animalService.addAnimalPic(this.newAnimal.name, animalObs);
     }
 
   }
-
-  // small extra: add a picture to the animal
-  private addAnimal (animalObs) {
-    const animalImageObs = this.http.get(`http://animals.tsmean.com/find?q=${this.newAnimal.name.toLowerCase()}`);
-    animalObs.subscribe(animalResp => {
-      animalImageObs.subscribe(animal => {
-        animalResp.pic = animal.json().urlEncodedPath;
-        this.animalService.updateAnimal(animalResp).subscribe(updatedAnimal => {
-          this.animalStoreService.addOrUpdate(updatedAnimal);
-        });
-      });
-    });
-  };
 
 }
