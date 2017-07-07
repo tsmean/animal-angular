@@ -2,7 +2,11 @@
   <div class="center">
     <div>
       <md-input-container class="full-width">
-        <input mdInput type="text" placeholder="Animal's Name" [(ngModel)]="newAnimal.name">
+        <input mdInput
+               type="text"
+               placeholder="Animal's Name"
+               (keypress)="createAnimalOnEnter($event)"
+               [(ngModel)]="newAnimal.name">
       </md-input-container>
     </div>
     <div>

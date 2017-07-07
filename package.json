@@ -24,7 +24,7 @@
     "@angular/router": "^4.2.5",
     "@tsmean/resource": "^2.0.2",
     "core-js": "^2.4.1",
-    "notify-angular": "^2.0.1",
+    "notify-angular": "^2.0.2",
     "resource": "^0.8.1",
     "rxjs": "^5.4.1",
     "zone.js": "^0.8.12"

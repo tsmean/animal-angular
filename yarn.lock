@@ -3293,9 +3293,9 @@ normalize-url@^1.4.0:
     query-string "^4.1.0"
     sort-keys "^1.0.0"
 
-notify-angular@^2.0.1:
-  version "2.0.1"
-  resolved "https://registry.yarnpkg.com/notify-angular/-/notify-angular-2.0.1.tgz#8b000d51c49e4ac103cecd3ec1a09a18f281aac7"
+notify-angular@^2.0.2:
+  version "2.0.2"
+  resolved "https://registry.yarnpkg.com/notify-angular/-/notify-angular-2.0.2.tgz#f185a82b54cb42f19f3a14968a69a7748e8c6acd"
 
 "npmlog@0 || 1 || 2 || 3 || 4", npmlog@^4.0.0, npmlog@^4.0.2:
   version "4.1.2"

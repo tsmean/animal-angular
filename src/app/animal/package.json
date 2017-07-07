@@ -23,7 +23,9 @@
     "url": "https://github.com/bersling/animal-module/issues"
   },
   "homepage": "https://github.com/bersling/animal-module#readme",
-  "dependencies": {},
+  "dependencies": {
+    "@tsmean/utils": "^1.1.3"
+  },
   "peerDependencies": {
     "@angular/common": "^4.0.0",
     "@angular/forms": "^4.2.5",

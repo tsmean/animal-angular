@@ -5,6 +5,7 @@ import {NotifyService} from 'notify-angular';
 import {AnimalDashboardListStore} from '../animal-dashboard-list.store';
 import {AnimalStoreService} from '../animal.store';
 import {Http} from '@angular/http';
+import {WebUtils} from '@tsmean/utils';
 
 @Component({
   selector: 'animal-create',
@@ -36,11 +37,15 @@ export class CreateAnimalComponent implements OnInit {
     }, errorResp => {
       this.notifyService.error(errorResp.statusText);
     });
-
     if (this.newAnimal.name) {
       this.animalService.addAnimalPic(this.newAnimal.name, animalObs);
     }
+  }
 
+  createAnimalOnEnter(e: KeyboardEvent) {
+    if (WebUtils.isEnter(e)) {
+      this.createAnimal();
+    }
   }
 
 }
