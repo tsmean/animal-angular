@@ -1,6 +1,5 @@
-import {EventEmitter, Injectable} from '@angular/core';
+import {Injectable} from '@angular/core';
 import {Observable} from 'rxjs/Observable';
-import { Animal } from './animal';
 import {BehaviorSubject} from 'rxjs/BehaviorSubject';
 
 @Injectable()
@@ -9,7 +8,6 @@ export class AnimalDashboardListStore {
   private dashboardList = new BehaviorSubject([]);
 
   constructor() { }
-
 
   /**
    * Adds a resourceId to the list. If no position is provided, appends it to the end.
@@ -29,15 +27,25 @@ export class AnimalDashboardListStore {
     }
   }
 
+  /**
+   * Resets the entire list
+   */
   set(newList: string[]): void {
     this.dashboardList.next(newList);
   }
 
+  /**
+   * Remove a single item from the list by its id
+   */
   removeById (resourceId: string): void {
     const currentValue = this.dashboardList.getValue();
     this.dashboardList.next(currentValue.filter(id => id !== resourceId));
   }
 
+
+  /**
+   * Remove a single item from the list by its position
+   */
   removeByIndex (index: number): void {
     const currentValue = this.dashboardList.getValue();
     currentValue.splice(index, 1);
@@ -45,10 +53,17 @@ export class AnimalDashboardListStore {
   }
 
 
+  /**
+   * Get the list-observable
+   */
   get(): Observable<string[]> {
     return this.dashboardList;
   }
 
+
+  /**
+   * Update an item in the list by its index
+   */
   updateByIndex (index: number, newResourceId: string): void {
     const currentValue = this.dashboardList.getValue();
     if (index <= currentValue.length) {
@@ -59,6 +74,9 @@ export class AnimalDashboardListStore {
     }
   }
 
+  /**
+   * Update an item in the list by its id
+   */
   updateById (id: string, newResourceId: string): void {
     const currentValue = this.dashboardList.getValue();
     const newValue = currentValue.map(x => x === id ? newResourceId : x);
