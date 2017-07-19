@@ -9,11 +9,13 @@ import { ResourceModule } from '@tsmean/resource';
 import {NotifyModule} from 'notify-angular';
 import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
 import {MdButtonModule} from '@angular/material';
+import { SpacerComponent } from './spacer/spacer.component';
 
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    SpacerComponent
   ],
   imports: [
     BrowserModule,
