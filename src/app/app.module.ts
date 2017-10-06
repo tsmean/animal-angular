@@ -8,7 +8,7 @@ import { ResourceModule } from '@tsmean/resource';
 
 import {NotifyModule} from 'notify-angular';
 import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
-import {MdButtonModule} from '@angular/material';
+import {MatButtonModule} from '@angular/material';
 import { SpacerComponent } from './spacer/spacer.component';
 
 
@@ -23,7 +23,7 @@ import { SpacerComponent } from './spacer/spacer.component';
     ResourceModule.forRoot('http://demo.tsmean.com:4242/api/v1'),
     NotifyModule.forRoot(),
     AnimalModule.forRoot(),
-    MdButtonModule
+    MatButtonModule
   ],
   providers: [],
   bootstrap: [AppComponent]

@@ -1,18 +1,18 @@
 <a name="animal-input"></a>
-<md-card>
+<mat-card>
   <div class="center">
     <div>
-      <md-input-container class="full-width">
-        <input mdInput
+      <mat-form-field class="full-width">
+        <input matInput
                id="animal-input"
                type="text"
                placeholder="Animal's Name"
                (keypress)="createAnimalOnEnter($event)"
                [(ngModel)]="newAnimal.name">
-      </md-input-container>
+      </mat-form-field>
     </div>
     <div>
-      <button md-raised-button color="accent" (click)="createAnimal()">Create</button>
+      <button mat-raised-button color="accent" (click)="createAnimal()">Create</button>
     </div>
   </div>
-</md-card>
+</mat-card>

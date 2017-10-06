@@ -1,4 +1,4 @@
-<md-card>
+<mat-card>
 
   <div style="display: flex; align-items: center">
   
@@ -9,16 +9,16 @@
       <div *ngIf="!animalSettings.isBeingEdited">
         {{animal.name}}
       </div>
-      <md-input-container *ngIf="animalSettings.isBeingEdited">
-        <input mdInput placeholder="Animal's Name" [(ngModel)]="animalCopy.name"/>
-      </md-input-container>
-      <button color="accent" md-raised-button *ngIf="animalSettings.isBeingEdited" (click)="updateAnimal()">Update Animal</button>
+      <mat-form-field *ngIf="animalSettings.isBeingEdited">
+        <input matInput placeholder="Animal's Name" [(ngModel)]="animalCopy.name"/>
+      </mat-form-field>
+      <button color="accent" mat-raised-button *ngIf="animalSettings.isBeingEdited" (click)="updateAnimal()">Update Animal</button>
     </div>
   
     <div>
-      <button md-button color="primary" (click)="resetCopy(); toggleEditable();">
-        <md-icon *ngIf="!animalSettings.isBeingEdited">edit</md-icon>
-        <md-icon *ngIf="animalSettings.isBeingEdited">cancel</md-icon>
+      <button mat-button color="primary" (click)="resetCopy(); toggleEditable();">
+        <mat-icon *ngIf="!animalSettings.isBeingEdited">edit</mat-icon>
+        <mat-icon *ngIf="animalSettings.isBeingEdited">cancel</mat-icon>
       </button>
     </div>
     
@@ -26,4 +26,4 @@
     
   </div>
   
-</md-card>
+</mat-card>

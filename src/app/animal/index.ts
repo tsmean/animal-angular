@@ -9,8 +9,8 @@ import {AnimalWrapperComponent} from './animal-wrapper/animal-wrapper.component'
 import {FormsModule} from '@angular/forms';
 
 import {
-  MdInputModule, MdButtonModule, MdCardModule, MdToolbarModule, MdMenuModule,
-  MdIconModule
+  MatInputModule, MatButtonModule, MatCardModule, MatToolbarModule, MatMenuModule,
+  MatIconModule
 } from '@angular/material';
 import {AnimalDashboardListStore} from './animal-dashboard-list.store';
 import {AnimalStoreService} from './animal.store';
@@ -19,12 +19,12 @@ import {AnimalStoreService} from './animal.store';
   imports: [
     CommonModule,
     FormsModule,
-    MdInputModule,
-    MdButtonModule,
-    MdCardModule,
-    MdToolbarModule,
-    MdMenuModule,
-    MdIconModule
+    MatInputModule,
+    MatButtonModule,
+    MatCardModule,
+    MatToolbarModule,
+    MatMenuModule,
+    MatIconModule
   ],
   declarations: [
     CreateAnimalComponent,
